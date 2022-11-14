@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+	
+
+	*{
+	    font-family: 'Poppins', sans-serif;
+	    margin: 0;
+	    padding: 0;
+	    box-sizing: border-box;
+	    outline: none;
+	    border: none;
+	    text-transform: capitalize;
+	    transition: 0.2s ease-in-out;
+	    text-decoration: none;
+	}
+	
+	::selection{
+	    background-color: var(--Soft-Red);
+	    color: #fff;
+	}
+	::-webkit-scrollbar{
+	    width: 12px;
+	}
+	::-webkit-scrollbar-thumb{
+	    background-color: darkgreen;
+	}
+	section {
+	    padding: 2rem 9%;
+	}
+	
+
+	html{
+	    font-size: 62.5%;
+	    scroll-behavior: smooth;
+	    overflow-x: hidden;
+	}
+	
+    .heading{
+	    text-align: center;
+	    font-size: 2rem;
+	    color: var(--Very-Dark-Blue);
+	    margin-top: 10rem;
+	    margin-bottom: 5rem;
+	}
+	.heading h1{
+	    padding-bottom: 2rem;
+	}
+
+	.heading li{
+		list-style: none;
+	}
+	.heading p{
+	    max-width: 60rem;
+	    margin: auto;
+	    color: var(--Grayish-Blue);
+	    font-size: 1.7rem;
+	}
+	.all-btn{
+	    padding: 1rem 3rem;
+	    font-size: 1.5rem;
+	    background-color: var(--Soft-Blue);
+	    border-radius: .5rem;
+	    color: #fff;
+	}
+	
+
+	.all-btn:hover{
+	    background-color: transparent;
+	    color: var(--Soft-Blue);
+	    border: 2px solid var(--Soft-Blue);
+	}
+	:root{
+	    --Soft-Blue: hsl(231, 69%, 60%);
+	    --Soft-Red: hsl(0, 94%, 66%);
+	    --Grayish-Blue: hsl(229, 8%, 60%);
+	    --Very-Dark-Blue: hsl(229, 31%, 21%);
+	    --box-shadow: .5rem .5rem  0 hsl(231, 69%, 60%);
+	    --text-shadow: .4rem .4rem  0 rgba(0, 0, 0, .2);
+	    --border: .2rem  solid var(--green);
+	}
+
+    .far{
+		font-size: 20px;
+        padding-top: 15rem;
+        color: var(--Very-Dark-Blue);
+	}
+    .far p{
+        font-size: 1.7rem;
+	    padding: 1rem 0;
+	    max-width: 120rem;
+	    color: var(--Grayish-Blue);
+	    padding-bottom: 4rem;
+        text-align: center;
+    }
+    .far h1{
+        font-size: 4.5rem;
+	    padding-block-end: 1rem 0;
+	    color: var(--Very-Dark-Blue);
+        text-align: center;
+    }
+	.far li{
+	    list-style: none;
+        font-size: 1.5rem;
+	    padding: 1rem 0;
+	    color: var(--Very-Dark-Blue);
+        text-align: center;
+	}
+	.home h1{
+		font-size: 4.5rem;
+	    padding-block-end: 1rem 0;
+	    color: var(--Very-Dark-Blue);
+        text-align: center;
+
+	}
+	.home ul li{
+		list-style: none;
+        font-size: 1.5rem;
+	    padding: 1rem 0;
+	    color: var(--Very-Dark-Blue);
+        text-align: center;
+	}
+	.home p{
+		font-size: 1.7rem;
+	    padding: 1rem 0;
+	    max-width: 100%;
+	    color: var(--Grayish-Blue);
+	    padding-bottom: 0.5rem;
+		padding-top: -3rem;
+        text-align: center;
+	}
+
+
+	.image img{
+	    width: 100%;
+	    margin-top: 5rem;
+	}
+    .header {
+	    padding: 1rem 9%;
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    position: fixed;
+	    top: 0;
+	    right: 0%;
+	    left: 0;
+	    z-index: 10000;
+	    background-color: #fff;
+	    box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+		
+	}
+	
+    .header .logo{
+	    cursor: pointer;
+	}
+	
+
+	.header .navbar a{
+	    margin-left: 2rem;
+	    font-size: 1.7rem;
+	    text-transform: uppercase;
+		color: black;
+	}
+	
+    .header .navbar a:hover{
+	    color: green;
+	}
+	
+    .header .navbar .btn{
+	    padding: .6rem 3rem;
+	    background-color: green;
+	    color: #fff;
+	    border-radius: .5rem;
+	}
+	
+	.header .navbar .btn:hover{
+	    color: green;
+	    background-color: transparent;
+	    border: 2px solid var(--Green);
+	}
+    #menu-btn{
+	    padding: 1rem 1rem;
+	    background-color: #eee;
+	    font-size: 3rem;
+	    color: var(--Soft-Blue);
+	    border-radius: .5rem;
+	    cursor: pointer;
+	    display: none;
+	}
+
+    /* Media Queries */
+	@media (max-width: 991px){
+	    html{
+	        font-size: 55%;
+	    }
+	    .header{
+	        padding: 2rem;
+	    }
+	    
+	}
+	
+    @media (max-width: 768px){
+	    #menu-btn{
+	        display: initial;
+	    }
+	
+	    .header .navbar{
+	        position: absolute;
+	        top: 115%;
+	        right: 2rem;
+	        box-shadow: var(--box-shadow);
+	        width: 33rem;
+	        border-radius: .5rem;
+	        border: 2px solid var(--Soft-Blue);
+	        background-color: #fff;
+	        transform: scale(0);
+	        transform-origin: top right;
+			color: black;
+	    }
+	
+
+	    .header .navbar.active{
+	        transform: scale(1);
+	    }
+	
+
+	    .header .navbar a{
+	        margin: 2.5rem;
+	        text-align: center;
+	        display: block;
+	        font-size: 2rem;
+			
+	    }
+	}
+	
+    @media (max-width: 450px){
+	    html{
+	        font-size: 50%;
+	    }
+	}
+	
+	/* navbar sections ends */
+	.first-heading h1{
+		font-size: 35px;
+		text-align: center;
+		color: black;
+		padding-top: 15rem;
+	}
+	
+	section{
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color:darkgray;
+	}
+	.container {
+		width: 90%;
+		max-width: 1000px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.left{
+		width: 50%;
+		height: 600px;
+		background: url('tra2.png') no-repeat center / cover;
+		border-radius: 8px;
+		
+		
+	}
+	.right .content{
+		width: 50%;
+		min-height: 200px;
+		background-color:dimgray;
+		align-items: center;
+		justify-content: center;
+		padding: 30px;
+		border-radius: 8px;
+		color: white;
+		margin-left: -100px;
+
+	}
+	.right h1{
+		font-size: 20px;
+		font-weight:bolder;
+	}
+	.right p{
+		margin: 25px ;
+		font-weight: 800;
+	}
+	.picture img{
+		width: 50%;
+		height: 30%;
+		align-content: center;
+		display:inline-flex;
+		border-radius: 10px;
+	}
+	
+	.benefits-title{
+		text-align: center;
+		color:black;
+		text-transform: uppercase;
+		font-size: 20px;
+    }
+	.border{
+		width: 160px;
+		height: 2px;
+		background: #82ccdd;
+		margin: 40px auto;
+	}
+	.benefits-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.benefits-box{
+		max-width: 50%;
+		padding: 10px;
+		padding-bottom: 4rem;
+		padding-top: 3rem;
+		text-align: center;
+		color:darkgray;
+		cursor: pointer;
+		border-radius: 5px;
+		border-style: dotted;
+		background-image: linear-gradient(rgba(150, 182, 63, 0.5),#e7f1f3), url('pix.png');
+	
+	}
+	.section-title{
+		font-size: 30px;
+		text-transform: uppercase;
+		margin-top: 10px;
+		text-align: center;
+		
+	}
+	.benefits-desc{
+		font-size: 14px;
+		color:black;
+	}
+    </style>
+    
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="r5 logo.webp" alt="logo" width="100">
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About us</a>
+            <a href="#services">Services</a>
+            <a href="#footer">Contact</a>
+    <!--    <a href="#" class="btn">log in</a>   -->
+        </nav>
+
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+	
+	    <div class="first-heading">
+		<h1>Why choose R5wallet</h1>
+	    </div>
+
+
+	<section>
+	<div class="container">
+		<div class="left"></div>
+		<div class="right">
+			<div class="content">
+				<h1>Transactions with the mobile banking application</h1>
+				<p>At R5wallet we ensure safe and quick <br>transactions with people around the world. R5wallet is an all <br>in one Cashless Mobile Payment wallet created to offer financial payment services <br>in informal sectors like;
+					townships, rural areas, taxi industry and also in towns and cities
+				</p>
+        </div>
+		</div>
+</div>
+</section>
+
+<div class="benefits-section">
+  <div class="inner-width">
+     <h1 class="section-title">Customer benefits</h1>
+        <div class="border" ></div>
+		<div class="benefits-container">
+			<div class="benefits-box">
+				<div class="benefits-title">Convenience</div>
+            <div class="benefits-desc">
+			The R5wallet app is data-free therefore the users won't have to worry about airtime and data bundles whenever they want to use the app, it also makes it easy to do transactions from the comfort of your home.
+		</div>
+		</div>
+	
+  
+			<div class="benefits-box">
+			  <div class="benefits-title">Ease of access</div>
+                 <div class="benefits-desc">
+				One of the primary benefits of Mobile Banking is that it has made it possible for you to stonewall the typical challenges of accessing your account once the bank's branch closes for the day. You do not have to wait for the bank to reopen the following day to transfer money to another account. You can easily access your account 24x7 and transfer funds whenever you need to.
+		    </div>
+			</div>
+
+			<div class="benefits-box">
+				<div class="benefits-title">More security</div>
+				   <div class="benefits-desc">
+					You can beef up the reliability of the financial transactions once you log into your Mobile Banking app by using a multi-level authentication system that requires the user to go through a pronged security set-up before managing the account.
+			  </div>
+			  </div>
+
+			  <div class="benefits-box">
+				<div class="benefits-title">Helps you track your finances</div>
+				   <div class="benefits-desc">
+					Managing your R5wallet account puts you in charge of your money and helps you gauge  your financial standing.
+	                 </div>
+                    </div>
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>
