@@ -433,7 +433,7 @@
 		color:black;
 		font-size: 1.7rem;
 	    padding: 1rem 0;
-	    color: var(--Grayish-Blue);
+	    color: var(--Very-Dark-Blue);
 	    padding-bottom: 4rem;
 		margin: auto ;
 		text-align: center;
@@ -462,7 +462,7 @@
 		text-align: center;
 	}
 	.benefits-box:hover{
-		background:rgb(164, 212, 50);
+		background:rgb(22, 177, 16);
 		color: #fff;
 		transform: scale(1.05);
 
