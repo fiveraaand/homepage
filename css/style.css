@@ -232,9 +232,7 @@
 	h1{
 		transition: width 2s, height 2s, transform 2s;
 	}
-	h1:hover{
-		transform:rotate(360deg);
-	}
+	
 	
 
 	.home .content p{
@@ -261,6 +259,25 @@
 	    box-shadow: none;
 	    color: #fff;
 	}
+	
+	@keyframes slideright{
+		0%{
+			transform: translate(50px);
+			opacity: 0;
+		}
+		100%{
+			transform: translate(50px);
+			opacity: 1;
+		}
+	}
+	h1.slide-right{
+		animation-delay: 1s;
+	}
+	p.slide-right{
+		animation-delay: 2s;
+	}
+	
+
 	
      /* home section ends */
 	
@@ -388,8 +405,60 @@
 		font-size: 2rem;
 	    padding: 1rem 0;
 	    color: var(--Very-Dark-Blue);
-		
-
+	}
+	#slider{
+		overflow: hidden;
+		width: 50%;
+		height: 100rem;
+	}
+	#slider{
+	    padding-top: 15rem;
+	}
+	#slider h2{
+		text-align: center;
+		font-size: 2rem;
+	    padding: 1rem 0;
+	    color: var(--Very-Dark-Blue);
+	}
+	#slider figure{
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+	}
+	#slider figure img{
+		float: left;
+		width: 20%;
+	}
+	@keyframes slider{
+		0%{
+			left: 0;
+		}
+		20%{
+			left: 0;
+		}
+		25%{
+			left: -100%;
+		}
+		45%{
+			left: -100%;
+		}
+		50%{
+			left: -200%;
+		}
+		70%{
+			left: -200%;
+		}
+		75%{
+			left: -300%;
+		}
+		95%{
+			left: -300;
+		}
+		100%{
+			left: -400;
+		}
 	}
 	
 	/* about section ends  */
@@ -492,7 +561,8 @@
 	    color:var(--black);
 	    padding: 1rem 0;
 		text-align: center;
-		padding-top: 12rem;
+		padding-top: 4rem;
+		
 
 	}
 	.footer .box-container{
